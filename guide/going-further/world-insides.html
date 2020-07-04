@@ -1,0 +1,323 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>What's inside a World? - Shipyard User's Guide</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../welcome.html">Welcome</a></li><li class="chapter-item expanded "><a href="../getting-started.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="../fundamentals.html"><strong aria-hidden="true">2.</strong> Fundamentals</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../fundamentals/world.html"><strong aria-hidden="true">2.1.</strong> Create a World</a></li><li class="chapter-item expanded "><a href="../fundamentals/run.html"><strong aria-hidden="true">2.2.</strong> Run the World</a></li><li class="chapter-item expanded "><a href="../fundamentals/add-entities.html"><strong aria-hidden="true">2.3.</strong> Add Entities</a></li><li class="chapter-item expanded "><a href="../fundamentals/delete-entities.html"><strong aria-hidden="true">2.4.</strong> Delete Entities</a></li><li class="chapter-item expanded "><a href="../fundamentals/add-components.html"><strong aria-hidden="true">2.5.</strong> Add Components</a></li><li class="chapter-item expanded "><a href="../fundamentals/remove-components.html"><strong aria-hidden="true">2.6.</strong> Remove Components</a></li><li class="chapter-item expanded "><a href="../fundamentals/delete-components.html"><strong aria-hidden="true">2.7.</strong> Delete Components</a></li><li class="chapter-item expanded "><a href="../fundamentals/get-and-modify.html"><strong aria-hidden="true">2.8.</strong> Get and Modify Components</a></li><li class="chapter-item expanded "><a href="../fundamentals/iterators.html"><strong aria-hidden="true">2.9.</strong> Iterators</a></li><li class="chapter-item expanded "><a href="../fundamentals/systems.html"><strong aria-hidden="true">2.10.</strong> Systems</a></li></ol></li><li class="chapter-item expanded "><a href="../going-further.html"><strong aria-hidden="true">3.</strong> Going Further</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../going-further/world-insides.html" class="active"><strong aria-hidden="true">3.1.</strong> What's inside a World?</a></li><li class="chapter-item expanded "><a href="../going-further/parallelism.html"><strong aria-hidden="true">3.2.</strong> Parallelism</a></li><li class="chapter-item expanded "><a href="../going-further/packs.html"><strong aria-hidden="true">3.3.</strong> Packs</a></li><li class="chapter-item expanded "><a href="../going-further/other-component-storage.html"><strong aria-hidden="true">3.4.</strong> Other Components and Storages</a></li><li class="chapter-item expanded "><a href="../going-further/try-unchecked.html"><strong aria-hidden="true">3.5.</strong> Might want to try_ or go _unchecked</a></li><li class="chapter-item expanded "><a href="../going-further/syntactic-peculiarities.html"><strong aria-hidden="true">3.6.</strong> Syntactic Peculiarities</a></li></ol></li><li class="chapter-item expanded "><a href="../recipes.html"><strong aria-hidden="true">4.</strong> Recipes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../recipes/hierarchy.html"><strong aria-hidden="true">4.1.</strong> Hierarchy</a></li><li class="chapter-item expanded "><a href="../recipes/seed.html"><strong aria-hidden="true">4.2.</strong> Seed</a></li><li class="chapter-item expanded "><a href="../recipes/0.4-migration.html"><strong aria-hidden="true">4.3.</strong> 0.4 migration</a></li></ol></li><li class="chapter-item expanded "><a href="../pilgrimage.html"><strong aria-hidden="true">5.</strong> Pilgrimage</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../pilgrimage/different-types-of-ecs.html"><strong aria-hidden="true">5.1.</strong> Different Types of ECS</a></li><li class="chapter-item expanded "><a href="../pilgrimage/more-resources.html"><strong aria-hidden="true">5.2.</strong> More Resources</a></li></ol></li><li class="chapter-item expanded "><a href="../contributors.html"><strong aria-hidden="true">6.</strong> Contributors</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Shipyard User's Guide</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#whats-inside-a-world" id="whats-inside-a-world">What's inside a World?</a></h1>
+<p>In the last section we learned how to interact with <a href="https://docs.rs/shipyard/latest/shipyard/struct.World.html"><code>World</code></a> and access what's inside it without knowing what it is. Let's change that!</p>
+<h3><a class="header" href="#storage" id="storage">Storage</a></h3>
+<p>Currently there exists only one type of storage in Shipyard: <a href="https://docs.rs/shipyard/latest/shipyard/struct.SparseSet.html"><code>SparseSet</code></a>. We're just going to focus on that implementation.</p>
+<p><a href="https://docs.rs/shipyard/latest/shipyard/struct.SparseSet.html"><code>SparseSet</code></a> is a data-structure made of 3 vectors:</p>
+<ul>
+<li><code>sparse</code> contains indices (<code>usize</code>) to the <code>dense</code> vector</li>
+<li><code>dense</code> contains indices (<a href="https://docs.rs/shipyard/latest/shipyard/struct.EntityId.html"><code>EntityId</code></a>) to the <code>sparse</code> vector</li>
+<li><code>data</code> contains the actual components</li>
+</ul>
+<p>When <code>sparse</code> and <code>dense</code> point to each other, the entity owns the component present in the <code>data</code> vector at the same <code>dense</code> index.</p>
+<p><code>dense</code> is always the same length as <code>data</code>, the number of components present in the storage.</p>
+<p><code>sparse</code>, on the other hand, is more or less as big as the total number of entities created minus the number of entities deleted.</p>
+<p>Let's look at an example:</p>
+<pre><code class="language-rust noplaypen">let world = World::new();
+
+world.run(
+    |mut entities: EntitiesViewMut, mut u32s: ViewMut&lt;u32&gt;, mut f32s: ViewMut&lt;f32&gt;| {
+        let _entity0 = entities.add_entity(&amp;mut u32s, 10);
+        let _entity1 = entities.add_entity(&amp;mut f32s, 20.0);
+        let _entity2 = entities.add_entity(&amp;mut u32s, 30);
+    },
+);
+</code></pre>
+<p>When we create the <a href="https://docs.rs/shipyard/latest/shipyard/struct.World.html"><code>World</code></a> there is no component storage in it, <a href="https://docs.rs/shipyard/latest/shipyard/struct.World.html#method.run"><code>run</code></a> will create an empty storage for <code>u32</code> and <code>f32</code>.
+We then create <code>entity0</code>, <code>u32</code>'s storage now looks like this:</p>
+<pre><code>sparse: [0]
+dense: [0]
+data: [10]
+</code></pre>
+<p><code>sparse[0]</code> and <code>dense[0]</code> point to each other, the entity owns a component in this storage.
+We add two more entities, now <code>u32</code> looks like this:</p>
+<pre><code>sparse: [0, 0, 1]
+dense: [0, 2]
+data: [10, 30]
+</code></pre>
+<p>We can see that <code>sparse[1]</code> got initialized with <code>0</code>, <code>entity1</code> doesn't have any <code>u32</code> component and <code>dense[0]</code> doesn't point back to it, all good.</p>
+<h3><a class="header" href="#entities" id="entities">Entities</a></h3>
+<p><a href="https://docs.rs/shipyard/latest/shipyard/struct.Entities.html"><code>Entities</code></a> is a simpler data structure, it's made of an <a href="https://docs.rs/shipyard/latest/shipyard/struct.EntityId.html"><code>EntityId</code></a> vector and an optional tuple of two indices. This tuple points to the first and last deleted entity.</p>
+<p>Each time an entity is added, the tuple is checked. If it is <code>None</code>, then the entity is allocated at the end of the vector.</p>
+<p>If the tuple is <code>Some</code>, we'll use the oldest deleted index for the new entity and update the tuple.</p>
+<p>If <a href="https://docs.rs/shipyard/latest/shipyard/struct.EntityId.html"><code>EntityId</code></a> was interpreted as only an index, then two entities could have the same id. In just few operations, add - remove - add, we're back to the same index for a different entity, which could cause problems.</p>
+<p>Which is why <a href="https://docs.rs/shipyard/latest/shipyard/struct.EntityId.html"><code>EntityId</code></a> is not just an index, it is interpreted as two parts: a 48-bit index and a 16-bit generation.</p>
+<p>When we delete an entity its generation gets incremented and its index becomes part of the optional tuple.</p>
+<p>This tuple only contains two elements, however, so we use the indices of deleted <a href="https://docs.rs/shipyard/latest/shipyard/struct.EntityId.html"><code>EntityId</code></a> entries to to form a linked list of all the deleted entries from most recently deleted to oldest.</p>
+<p>Let's modify our previous example a little:</p>
+<pre><code class="language-rust noplaypen">let world = World::new();
+
+let [entity0, entity1] = world.run(
+    |mut entities: EntitiesViewMut, mut u32s: ViewMut&lt;u32&gt;, mut f32s: ViewMut&lt;f32&gt;| {
+        let result = [
+            entities.add_entity(&amp;mut u32s, 10),
+            entities.add_entity(&amp;mut f32s, 20.0),
+        ];
+        let _entity2 = entities.add_entity(&amp;mut u32s, 30);
+
+        result
+    },
+);
+
+world.run(|mut all_storages: AllStoragesViewMut| {
+    all_storages.delete(entity0);
+    all_storages.delete(entity1);
+});
+</code></pre>
+<p>Let's take a look at what happens to <a href="https://docs.rs/shipyard/latest/shipyard/struct.Entities.html"><code>Entities</code></a> as we run this code.  After adding all three entries, it looks something like this:</p>
+<pre><code>ids: [
+    { index: 0, gen: 0 },
+    { index: 1, gen: 0 },
+    { index: 2, gen: 0 }
+]
+deleted: None
+</code></pre>
+<p>Then we delete <code>entity0</code>. Since there is just a single deleted entity, it's both the most recent one and the oldest one in the tuple.</p>
+<pre><code>ids: [
+    { index: 0, gen: 1 },
+    { index: 1, gen: 0 },
+    { index: 2, gen: 0 }
+]
+deleted: Some((0, 0))
+</code></pre>
+<p>Finally, we delete <code>entity1</code>.  <code>ids[newest].index</code> becomes <code>1</code> and we have a linked list where we start at the oldest index <code>0</code>.  <code>0</code> is not the newest index, so we know value <code>1</code> is the index of the next deleted <a href="https://docs.rs/shipyard/latest/shipyard/struct.EntityId.html"><code>EntityId</code></a>.  <code>1</code> is the newest index, so we know we have reached the end of the linked list of deleted entries.</p>
+<pre><code>ids: [
+    { index: 1, gen: 1 },
+    { index: 1, gen: 1 },
+    { index: 2, gen: 0 }
+]
+deleted: Some((1, 0))
+</code></pre>
+<h3><a class="header" href="#entityid" id="entityid">EntityId</a></h3>
+<p>While only 64 bits, <a href="https://docs.rs/shipyard/latest/shipyard/struct.EntityId.html"><code>EntityId</code></a>s are very interesting. Almost all ECS have this kind of id, the difference being the length of the id and generation.</p>
+<p>32 bits felt too small to fit the wildest use cases. A generic approach was discarded due to: first - adding a generic everywhere, and second - making actions between worlds more difficult.</p>
+<p>In some ECS implementations generations sometimes take more space, because who needs 48 bits for the index? But at the same time, who needs more than 16 bits for the generation?</p>
+<p>In the exceptional event that you add and remove entities to and from the same index enough times to reach the generation limit, the <a href="https://docs.rs/shipyard/latest/shipyard/struct.World.html"><code>World</code></a> won't panic. This index will be considered dead (simply by not adding it the linked list) and you'll get an entity at another index.</p>
+<p>Plus, we add and delete from opposite sides of the linked list making the generation increase slower in general.</p>
+<hr />
+<p>In the next chapter we'll look into parallelism.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../going-further.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../going-further/parallelism.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../going-further.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../going-further/parallelism.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
